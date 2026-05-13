@@ -1,10 +1,66 @@
-cat > /mnt/user-data/outputs/pedro_alcantara.html << 'HTMLEOF'
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Pedro Alcântara – Psicólogo | Psicopedagogo</title>
+
+<!-- ═══════════════════════════════════════════
+     SEO — quando tiver domínio, troque TODAS as
+     ocorrências de SEU-DOMINIO.psc.br pelo real.
+════════════════════════════════════════════ -->
+<title>Pedro Alcântara – Psicólogo Online | TCC e Psicopedagogia</title>
+<meta name="description" content="Psicólogo clínico online (CRP-04/67709) especializado em TCC e Psicopedagogia. Atendimento individual para crianças, adolescentes e adultos. Brasileiros no exterior bem-vindos.">
+<meta name="keywords" content="psicólogo online, psicólogo para brasileiros no exterior, TCC online, psicopedagogia, avaliação TDAH, avaliação TEA, ansiedade, depressão, psicólogo brasileiro, Pedro Alcântara">
+<meta name="author" content="Pedro Alcântara">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://SEU-DOMINIO.psc.br/">
+
+<!-- Open Graph (WhatsApp, Facebook, LinkedIn) -->
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://SEU-DOMINIO.psc.br/">
+<meta property="og:title" content="Pedro Alcântara – Psicólogo Online | TCC e Psicopedagogia">
+<meta property="og:description" content="Psicólogo clínico online especializado em TCC e Psicopedagogia. Atendimento para brasileiros em qualquer parte do mundo.">
+<meta property="og:image" content="https://SEU-DOMINIO.psc.br/foto.jpg">
+<meta property="og:locale" content="pt_BR">
+<meta property="og:site_name" content="Pedro Alcântara Psicólogo">
+
+<!-- Twitter/X Card -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Pedro Alcântara – Psicólogo Online | TCC e Psicopedagogia">
+<meta name="twitter:description" content="Psicólogo clínico online especializado em TCC e Psicopedagogia. Atendimento para brasileiros em qualquer parte do mundo.">
+<meta name="twitter:image" content="https://SEU-DOMINIO.psc.br/foto.jpg">
+
+<!-- Schema.org -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Person",
+  "name": "Pedro Alcântara",
+  "jobTitle": "Psicólogo Clínico e Psicopedagogo",
+  "description": "Psicólogo clínico especializado em TCC e Psicopedagogia. Atendimento online para brasileiros no exterior e presencial em Montes Claros, MG.",
+  "url": "https://SEU-DOMINIO.psc.br/",
+  "image": "https://SEU-DOMINIO.psc.br/foto.jpg",
+  "telephone": "+55-34-98403-7267",
+  "address": {
+    "@type": "PostalAddress",
+    "addressLocality": "Montes Claros",
+    "addressRegion": "MG",
+    "addressCountry": "BR"
+  },
+  "hasCredential": {
+    "@type": "EducationalOccupationalCredential",
+    "credentialCategory": "CRP-04/67709",
+    "recognizedBy": {
+      "@type": "Organization",
+      "name": "Conselho Regional de Psicologia – MG"
+    }
+  },
+  "knowsAbout": ["Terapia Cognitivo-Comportamental", "Psicopedagogia", "TDAH", "TEA", "Ansiedade", "Depressão"],
+  "availableLanguage": "Portuguese",
+  "sameAs": []
+}
+</script>
+
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,600;1,400&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
 <style>
@@ -25,7 +81,6 @@ cat > /mnt/user-data/outputs/pedro_alcantara.html << 'HTMLEOF'
   body { font-family: 'DM Sans', sans-serif; color: var(--text); background: var(--warm); line-height: 1.7; }
   h1,h2,h3,h4 { font-family: 'Lora', serif; line-height: 1.3; }
 
-  /* NAV */
   nav {
     position: fixed; top: 0; left: 0; right: 0; z-index: 100;
     background: rgba(245,240,234,0.93); backdrop-filter: blur(8px);
@@ -38,7 +93,6 @@ cat > /mnt/user-data/outputs/pedro_alcantara.html << 'HTMLEOF'
   .nav-links a { text-decoration: none; font-size: 0.85rem; color: var(--muted); font-weight: 500; transition: color 0.2s; }
   .nav-links a:hover { color: var(--sage); }
 
-  /* HERO */
   .hero {
     min-height: 60vh;
     display: grid; grid-template-columns: 1fr 1fr;
@@ -95,9 +149,6 @@ cat > /mnt/user-data/outputs/pedro_alcantara.html << 'HTMLEOF'
     display: flex; align-items: center; justify-content: center;
     position: relative; overflow: hidden;
   }
-  .photo-placeholder { display: flex; flex-direction: column; align-items: center; gap: 1rem; }
-  .photo-placeholder svg { opacity: 0.3; }
-  .photo-placeholder p { font-size: 0.85rem; color: rgba(255,255,255,0.4); text-align: center; line-height: 1.5; }
   .hero-online-badge {
     position: absolute; bottom: -14px; left: 50%; transform: translateX(-50%);
     background: var(--sage); color: white;
@@ -107,69 +158,45 @@ cat > /mnt/user-data/outputs/pedro_alcantara.html << 'HTMLEOF'
   }
   .hero-online-badge::before { content: ''; width: 7px; height: 7px; border-radius: 50%; background: #7eefc0; display: inline-block; }
 
-  /* SECTIONS */
   section { padding: 5rem 4rem; }
   .section-label { font-size: 0.75rem; font-weight: 500; letter-spacing: 0.12em; text-transform: uppercase; color: var(--accent); margin-bottom: 0.75rem; }
   .section-title { font-size: 2rem; color: var(--sage-dark); margin-bottom: 1rem; }
   .section-body { font-size: 1rem; color: var(--muted); max-width: 560px; }
 
-  /* SOBRE */
   #sobre { background: var(--white); }
   .sobre-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 4rem; align-items: start; }
   .sobre-text p { color: var(--muted); margin-bottom: 1rem; }
   .sobre-cards { display: flex; flex-direction: column; gap: 1rem; }
-  .sobre-card {
-    background: var(--warm); border: 1px solid var(--border);
-    border-radius: var(--radius); padding: 1.25rem;
-    display: flex; gap: 1rem; align-items: flex-start;
-  }
+  .sobre-card { background: var(--warm); border: 1px solid var(--border); border-radius: var(--radius); padding: 1.25rem; display: flex; gap: 1rem; align-items: flex-start; }
   .sobre-card-icon { width: 40px; height: 40px; border-radius: 10px; background: var(--sage-light); display: flex; align-items: center; justify-content: center; flex-shrink: 0; font-size: 1.1rem; }
   .sobre-card h4 { font-family: 'DM Sans', sans-serif; font-size: 0.9rem; font-weight: 500; color: var(--sage-dark); margin-bottom: 2px; }
   .sobre-card p { font-size: 0.85rem; color: var(--muted); }
 
-  /* FORMAÇÃO - novo layout */
   #formacao { background: var(--warm); }
   .form-academica-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 1.5rem; margin-top: 2.5rem; }
-  .form-card {
-    background: var(--white); border: 1px solid var(--border); border-radius: 16px;
-    padding: 2rem; position: relative; overflow: hidden;
-  }
-  .form-card::before {
-    content: ''; position: absolute; top: 0; left: 0; right: 0; height: 4px;
-    background: var(--sage);
-  }
+  .form-card { background: var(--white); border: 1px solid var(--border); border-radius: 16px; padding: 2rem; position: relative; overflow: hidden; }
+  .form-card::before { content: ''; position: absolute; top: 0; left: 0; right: 0; height: 4px; background: var(--sage); }
   .form-card.accent::before { background: var(--accent); }
   .form-card-icon { font-size: 2rem; margin-bottom: 1rem; }
   .form-card h3 { font-size: 1.2rem; color: var(--sage-dark); margin-bottom: 0.4rem; }
   .form-card .form-inst { font-size: 0.85rem; color: var(--muted); margin-bottom: 0.75rem; }
   .form-card .form-ano { display: inline-block; font-size: 0.75rem; font-weight: 500; color: var(--accent); background: rgba(193,127,74,0.1); padding: 3px 10px; border-radius: 100px; }
-
-  /* experiência - texto narrativo */
   .exp-section { margin-top: 3rem; }
   .exp-section > p { color: var(--muted); font-size: 1rem; max-width: 640px; margin-bottom: 2rem; }
   .exp-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 1.5rem; }
-  .exp-card {
-    background: var(--white); border: 1px solid var(--border); border-radius: 16px;
-    padding: 1.75rem; display: flex; flex-direction: column; gap: 0.75rem;
-  }
+  .exp-card { background: var(--white); border: 1px solid var(--border); border-radius: 16px; padding: 1.75rem; display: flex; flex-direction: column; gap: 0.75rem; }
   .exp-card-top { display: flex; align-items: center; gap: 0.75rem; }
   .exp-card-dot { width: 10px; height: 10px; border-radius: 50%; background: var(--sage); flex-shrink: 0; }
   .exp-card-top h4 { font-family: 'DM Sans', sans-serif; font-size: 1rem; font-weight: 500; color: var(--sage-dark); }
   .exp-card p { font-size: 0.88rem; color: var(--muted); line-height: 1.65; }
-
-  /* especializações */
   .espec-section { margin-top: 3rem; }
   .espec-section > p { color: var(--muted); font-size: 1rem; max-width: 640px; margin-bottom: 2rem; }
   .espec-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.25rem; }
-  .espec-card {
-    background: var(--sage-dark); border-radius: 16px; padding: 1.75rem;
-    display: flex; flex-direction: column; gap: 0.5rem;
-  }
+  .espec-card { background: var(--sage-dark); border-radius: 16px; padding: 1.75rem; display: flex; flex-direction: column; gap: 0.5rem; }
   .espec-card .espec-icon { font-size: 1.5rem; }
   .espec-card h4 { font-family: 'Lora', serif; font-size: 1rem; color: #fff; font-weight: 400; }
   .espec-card p { font-size: 0.82rem; color: rgba(255,255,255,0.55); }
 
-  /* ABORDAGENS */
   #abordagens { background: var(--white); }
   .abordagens-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 2rem; margin-top: 3rem; }
   .abord-card { background: var(--warm); border: 1px solid var(--border); border-radius: 16px; overflow: hidden; }
@@ -189,7 +216,6 @@ cat > /mnt/user-data/outputs/pedro_alcantara.html << 'HTMLEOF'
   .faq-item h5 { font-family: 'DM Sans', sans-serif; font-size: 0.875rem; font-weight: 500; color: var(--sage-dark); margin-bottom: 0.4rem; }
   .faq-item p { font-size: 0.84rem; color: var(--muted); }
 
-  /* TEMAS */
   #temas { background: var(--warm); }
   .temas-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1rem; margin-top: 2.5rem; }
   .tema-card { background: var(--white); border: 1px solid var(--border); border-radius: var(--radius); overflow: hidden; cursor: pointer; transition: border-color 0.2s, box-shadow 0.2s; }
@@ -205,7 +231,6 @@ cat > /mnt/user-data/outputs/pedro_alcantara.html << 'HTMLEOF'
   .tema-card.open .tema-body { max-height: 300px; padding: 0 1.25rem 1.25rem; }
   .tema-body p { font-size: 0.84rem; color: var(--muted); border-top: 1px solid var(--border); padding-top: 0.9rem; }
 
-  /* PRIMEIRA CONSULTA */
   #primeira { background: var(--white); }
   .consulta-steps { display: grid; grid-template-columns: repeat(4, 1fr); gap: 1.5rem; margin-top: 2.5rem; position: relative; }
   .consulta-steps::before { content: ''; position: absolute; top: 28px; left: calc(12.5% + 16px); right: calc(12.5% + 16px); height: 1px; background: var(--border); z-index: 0; }
@@ -217,7 +242,6 @@ cat > /mnt/user-data/outputs/pedro_alcantara.html << 'HTMLEOF'
   .consulta-nota-icon { font-size: 1.2rem; flex-shrink: 0; margin-top: 2px; }
   .consulta-nota p { font-size: 0.9rem; color: var(--sage-dark); }
 
-  /* FAQ */
   #faq { background: var(--warm); }
   .faq-list { display: flex; flex-direction: column; gap: 0.75rem; margin-top: 2.5rem; max-width: 800px; }
   .faq-item-main { background: var(--white); border: 1px solid var(--border); border-radius: var(--radius); overflow: hidden; cursor: pointer; transition: border-color 0.2s; }
@@ -231,7 +255,6 @@ cat > /mnt/user-data/outputs/pedro_alcantara.html << 'HTMLEOF'
   .faq-item-main.open .faq-answer { max-height: 200px; padding: 0 1.5rem 1.25rem; }
   .faq-answer p { font-size: 0.88rem; color: var(--muted); border-top: 1px solid var(--border); padding-top: 1rem; }
 
-  /* CONTATO */
   #contato { background: var(--sage-dark); color: white; }
   #contato .section-label { color: rgba(255,255,255,0.5); }
   #contato .section-title { color: white; }
@@ -282,7 +305,6 @@ cat > /mnt/user-data/outputs/pedro_alcantara.html << 'HTMLEOF'
   </ul>
 </nav>
 
-<!-- HERO -->
 <section class="hero" id="inicio">
   <div class="hero-bg"></div>
   <div class="hero-text">
@@ -301,27 +323,13 @@ cat > /mnt/user-data/outputs/pedro_alcantara.html << 'HTMLEOF'
   <div class="hero-photo">
     <div class="photo-wrap">
       <div class="photo-frame">
-        <div class="photo-frame">
-
-  <img 
-    src="foto.jpg" 
-    alt="Pedro Alcântara"
-    style="
-      width:100%;
-      height:100%;
-      object-fit:cover;
-    "
-  >
-
-</div>
-        </div>
+        <img src="foto.jpg" alt="Pedro Alcântara" style="width:100%;height:100%;object-fit:cover;">
       </div>
       <div class="hero-online-badge">Atendimento online disponível</div>
     </div>
   </div>
 </section>
 
-<!-- SOBRE -->
 <section id="sobre">
   <div class="sobre-grid">
     <div class="sobre-text">
@@ -350,7 +358,7 @@ cat > /mnt/user-data/outputs/pedro_alcantara.html << 'HTMLEOF'
         <div class="sobre-card-icon">🌐</div>
         <div>
           <h4>Atendimento online</h4>
-          <p>Consultas individuais para adolescentes e adultos em qualquer cidade do Brasil</p>
+          <p>Consultas individuais para adolescentes e adultos em qualquer cidade do Brasil e brasileiros no exterior</p>
         </div>
       </div>
       <div class="sobre-card">
@@ -364,12 +372,10 @@ cat > /mnt/user-data/outputs/pedro_alcantara.html << 'HTMLEOF'
   </div>
 </section>
 
-<!-- FORMAÇÃO -->
 <section id="formacao">
   <div class="section-label">Trajetória</div>
   <h2 class="section-title">Formação &amp; experiência</h2>
   <p class="section-body">Uma base acadêmica sólida combinada com anos de prática clínica e psicopedagógica em diferentes contextos.</p>
-
   <div class="form-academica-grid">
     <div class="form-card">
       <div class="form-card-icon">🎓</div>
@@ -384,41 +390,27 @@ cat > /mnt/user-data/outputs/pedro_alcantara.html << 'HTMLEOF'
       <span class="form-ano">2022</span>
     </div>
   </div>
-
   <div class="exp-section">
     <p>Mais de cinco anos dedicados ao atendimento clínico e psicopedagógico, com experiência construída em diferentes contextos: consultório privado, atendimento online e escola pública.</p>
     <div class="exp-grid">
       <div class="exp-card">
-        <div class="exp-card-top">
-          <div class="exp-card-dot"></div>
-          <h4>Clínica Aprender</h4>
-        </div>
+        <div class="exp-card-top"><div class="exp-card-dot"></div><h4>Clínica Aprender</h4></div>
         <p>No consultório, realizo atendimentos individuais pela abordagem TCC e avaliações psicopedagógicas. É onde concentro o trabalho clínico com crianças, adolescentes e adultos, desde o acolhimento inicial até intervenções de longo prazo voltadas ao desenvolvimento emocional e à aprendizagem.</p>
       </div>
       <div class="exp-card">
-        <div class="exp-card-top">
-          <div class="exp-card-dot" style="background:var(--accent)"></div>
-          <h4>Atendimento online</h4>
-        </div>
-        <p>Desde 2022, ofereço atendimentos psicológicos online para adolescentes e adultos em todo o Brasil. A modalidade permite cuidar da saúde mental com flexibilidade de agenda e sem barreira geográfica, com a mesma qualidade e sigilo das consultas presenciais.</p>
+        <div class="exp-card-top"><div class="exp-card-dot" style="background:var(--accent)"></div><h4>Atendimento online</h4></div>
+        <p>Desde 2022, ofereço atendimentos psicológicos online para adolescentes e adultos em todo o Brasil e para brasileiros no exterior. A modalidade permite cuidar da saúde mental com flexibilidade de agenda e sem barreira geográfica, com a mesma qualidade e sigilo das consultas presenciais.</p>
       </div>
       <div class="exp-card">
-        <div class="exp-card-top">
-          <div class="exp-card-dot" style="background:#7a9e96"></div>
-          <h4>Psicologia escolar</h4>
-        </div>
+        <div class="exp-card-top"><div class="exp-card-dot" style="background:#7a9e96"></div><h4>Psicologia escolar</h4></div>
         <p>A experiência como psicólogo escolar na rede pública ampliou minha visão sobre como o ambiente, a família e a escola se articulam no desenvolvimento da criança. Trabalhei com inclusão, saúde mental no contexto educacional e orientação a professores e gestores.</p>
       </div>
       <div class="exp-card">
-        <div class="exp-card-top">
-          <div class="exp-card-dot" style="background:#c1a47a"></div>
-          <h4>Psicopedagogia clínica</h4>
-        </div>
+        <div class="exp-card-top"><div class="exp-card-dot" style="background:#c1a47a"></div><h4>Psicopedagogia clínica</h4></div>
         <p>A passagem pela psicopedagogia clínica consolidou minha prática com avaliação e intervenção em dificuldades de aprendizagem. Aprendi a olhar para além do sintoma escolar e enxergar os fatores emocionais, relacionais e cognitivos que sustentam cada caso.</p>
       </div>
     </div>
   </div>
-
   <div class="espec-section">
     <p>Especializações complementares que aprofundam minha atuação nas áreas de maior demanda clínica.</p>
     <div class="espec-grid">
@@ -441,7 +433,6 @@ cat > /mnt/user-data/outputs/pedro_alcantara.html << 'HTMLEOF'
   </div>
 </section>
 
-<!-- ABORDAGENS -->
 <section id="abordagens">
   <div class="section-label">Como trabalho</div>
   <h2 class="section-title">Abordagens terapêuticas</h2>
@@ -505,7 +496,6 @@ cat > /mnt/user-data/outputs/pedro_alcantara.html << 'HTMLEOF'
   </div>
 </section>
 
-<!-- TEMAS -->
 <section id="temas">
   <div class="section-label">Áreas de atuação</div>
   <h2 class="section-title">O que posso ajudar você</h2>
@@ -550,7 +540,6 @@ cat > /mnt/user-data/outputs/pedro_alcantara.html << 'HTMLEOF'
   </div>
 </section>
 
-<!-- PRIMEIRA CONSULTA -->
 <section id="primeira">
   <div class="section-label">Sem mistérios</div>
   <h2 class="section-title">Como é a primeira consulta</h2>
@@ -583,7 +572,6 @@ cat > /mnt/user-data/outputs/pedro_alcantara.html << 'HTMLEOF'
   </div>
 </section>
 
-<!-- FAQ -->
 <section id="faq">
   <div class="section-label">Dúvidas comuns</div>
   <h2 class="section-title">Perguntas frequentes</h2>
@@ -615,7 +603,6 @@ cat > /mnt/user-data/outputs/pedro_alcantara.html << 'HTMLEOF'
   </div>
 </section>
 
-<!-- CONTATO -->
 <section id="contato">
   <div class="section-label">Vamos conversar</div>
   <h2 class="section-title">Agende sua consulta</h2>
@@ -634,7 +621,7 @@ cat > /mnt/user-data/outputs/pedro_alcantara.html << 'HTMLEOF'
           <div class="contato-item-icon">💻</div>
           <div class="contato-item-text">
             <small>Modalidade principal</small>
-            <span>Online para todo o Brasil</span>
+            <span>Online para todo o Brasil e brasileiros no exterior</span>
           </div>
         </div>
         <div class="contato-item">
@@ -659,7 +646,7 @@ cat > /mnt/user-data/outputs/pedro_alcantara.html << 'HTMLEOF'
 
 <footer>
   <p>© 2026 Pedro Alcântara — Psicólogo CRP-04/67709 | Psicopedagogo<br>
-  <span>Atendimento online para todo o Brasil · Presencial em Montes Claros, MG</span></p>
+  <span>Atendimento online para todo o Brasil e brasileiros no exterior · Presencial em Montes Claros, MG</span></p>
 </footer>
 
 <script>
